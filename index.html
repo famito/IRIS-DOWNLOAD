@@ -10,14 +10,15 @@
             margin: 0;
             font-family: "Chivo Mono", monospace;
             font-optical-sizing: auto;
-            font-weight: 400;
+            font-weight: 800;
             font-style: normal;
             background: linear-gradient(135deg, #1F1F1F, #141414 60%, #3A3A3A);
             color: #E0E0E0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             min-height: 100vh;
+            padding-top: 50px;
         }
 
         .container {
@@ -31,8 +32,18 @@
             font-size: 3rem;
             margin-bottom: 10px;
             text-transform: uppercase;
-            color: #9200FF; /* Accent violet */
+            color: #E0E0E0;
             animation: fadeIn 1s ease-in-out;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-decoration: underline;
+            color: #E0E0E0;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            animation: fadeIn 1.2s ease-in-out;
         }
 
         p {
@@ -42,6 +53,10 @@
             animation: fadeIn 1.2s ease-in-out;
         }
 
+        .category {
+            margin-bottom: 50px;
+        }
+
         .button-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -49,40 +64,47 @@
             animation: fadeIn 1.5s ease-in-out;
         }
 
+        
+        .button-container a:only-child {
+            grid-column: span 2;
+            justify-self: center;
+        }
+
         .button {
             display: inline-block;
             padding: 15px;
             font-size: 18px;
+            border: 2px solid #E0E0E0;
             color: white;
-            background-color: #9200FF; /* Violet accent pour les boutons */
+            background-color: #3A3A3A;
             text-decoration: none;
             border-radius: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.5s ease, box-shadow 0.3s ease, background-color 0.5s ease, color 0.3s ease;
+            box-shadow: 0px 0px 10px #E0E0E0;
             position: relative;
             overflow: hidden;
         }
 
+        .click-me {
+            margin: 0;
+            margin-left: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #E0E0E0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a .click-me{
+            color: #E0E0E0;
+        }
+
         .button:hover {
-            background-color: #7E00D4; /* Violet plus foncé au hover */
-            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.6);
-        }
-
-        .button:before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 300%;
-            height: 300%;
-            background-color: rgba(255, 255, 255, 0.15);
-            transition: all 0.75s ease;
-            transform: translate(-50%, -50%) scale(0);
-            border-radius: 50%;
-        }
-
-        .button:hover:before {
-            transform: translate(-50%, -50%) scale(1);
+            background-color:  #E0E0E0;
+            color: #3A3A3A;
+            transform: translateY(-2px);
+            box-shadow: 0px 8px 25px #3A3A3A;
         }
 
         @keyframes fadeIn {
@@ -90,10 +112,14 @@
             100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* Responsive pour mobile */
+       
         @media (max-width: 600px) {
             h1 {
                 font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
             }
 
             .button-container {
@@ -105,12 +131,45 @@
 <body>
     <div class="container">
         <h1>Unbranded Loaders</h1>
-        <p>Sélectionne l'un des loaders disponibles ci-dessous pour commencer.</p>
-        <div class="button-container">
-            <a href="https://lien1.com" class="button">Loader 1</a>
-            <a href="https://lien2.com" class="button">Loader 2</a>
-            <a href="https://lien3.com" class="button">Loader 3</a>
-            <a href="https://lien4.com" class="button">Loader 4</a>
+
+        
+        <div class="category">
+            <h2>MW3/BO6</h2>
+            <div class="button-container">
+                <a href="https://raw.githubusercontent.com/avod245/1183938967024959659_cloud/main/MW3_SILENT_CHAIR.exe" class="button">MW3 SILENT CHAIR</a>
+                <a href="https://raw.githubusercontent.com/avod245/1183938967024959659_cloud/main/MW3_LOUD_CHAIR.exe" class="button">MW3 LOUD CHAIR</a>
+                <a href="https://raw.githubusercontent.com/avod245/1183938967024959659_cloud/main/MW3.BO6_INFERNO.exe" class="button">MW3/BO6 INFERNO CHAIR</a>
+                <a href="https://raw.githubusercontent.com/avod245/1183938967024959659_cloud/main/MW2.MW3.BO6_EXT_CHAIR_LDV2.exe" class="button">MW3/BO6 EXTERNAL CHAIR LDV2</a>
+                <a href="https://raw.githubusercontent.com/avod245/1183938967024959659_cloud/main/MW2.MW3.BO6_EXT_CHAIR_PROGRESS.exe" class="button">MW3/BO6 EXTERNAL CHAIR PROGRESS</a>
+                <a href="https://raw.githubusercontent.com/avod245/1183938967024959659_cloud/main/MW3_UA_WOOFER.exe" class="button">MW3 UA WOOFER</a>
+                <a href="https://raw.githubusercontent.com/avod245/1183938967024959659_cloud/main/MW3_HWID_PROTECTOR.exe" class="button">HWID PROTECTOR</a>
+            </div>
+        </div>
+
+       
+        <div class="category">
+            <h2>FIVEM</h2>
+            <div class="button-container">
+                <a href="https://raw.githubusercontent.com/avod245/1183938967024959659_cloud/main/FIVEM_EXTERNAL_CHAIR.exe" class="button">FIVEM EXTERNAL CHAIR</a>
+            </div>
+        </div>
+
+        
+        <div class="category">
+            <h2>FORTNITE</h2>
+            <div class="button-container">
+                <a href="https://fruityskills.com/customer/login.php" class="button">FORTNITE EXTERNAL CHAIR</a>
+            </div>
+        </div>
+
+        
+        <div class="category">
+            <h2>OTHERS</h2>
+            <div class="button-container">
+                <a href="https://raw.githubusercontent.com/avod245/1183938967024959659_cloud/main/IRISOptimizerSetup.exe" class="button">PC OPTIMIZER V1</a>
+                <a href="https://verse-solutions.gitbook.io/verse-permanent" class="button">HWID PERM WOOFER</a>
+                <p class="click-me">Not openning? <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.403-windows-x86-installer" class="click-me">Click Me</a></p>
+            </div>
         </div>
     </div>
 </body>
